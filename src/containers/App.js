@@ -8,6 +8,7 @@ import Home from '../components/Home'
 import SamplePageOne from '../components/SamplePageOne'
 import SamplePageTwo from '../components/SamplePageTwo'
 import SamplePageThree from '../components/SamplePageThree'
+import NavBar from '../components/NavBar'
 
 
 class App extends Component {
@@ -15,10 +16,11 @@ class App extends Component {
     return (
       <Router>
         <div className="app">
-          <Route exact path="/" component={Home} />
-          <Route exact path="/pages/1" component={SamplePageOne} />
-          <Route exact path="/pages/2" component={SamplePageTwo} />
-          <Route exact path="/pages/3" component={SamplePageThree} />
+          <NavBar />
+          <Route exact path="/home" component={Home} />
+          <Route exact path="/first-page" component={SamplePageOne} />
+          <Route exact path="/second-page" component={SamplePageTwo} />
+          <Route exact path="/third-page" component={SamplePageThree} />
         </div>
       </Router>
     );
